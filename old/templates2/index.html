@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Predictor</title>
+</head>
+<body>
+    <h1>Diabetes Predictor</h1>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age"><br>
+        
+        <label for="gender">Gender (1 for male, 0 for female):</label><br>
+        <input type="number" id="gender" name="gender"><br>
+        
+        <label for="hypertension">Hypertension (0 for no, 1 for yes):</label><br>
+        <input type="number" id="hypertension" name="hypertension"><br>
+
+        <label for="heart_disease">Heart Disease (0 for no, 1 for yes):</label><br>
+        <input type="number" id="heart_disease" name="heart_disease"><br>
+
+        <label for="smoking_history">Smoking History (0 for no, 1 for yes):</label><br>
+        <input type="number" id="smoking_history" name="smoking_history"><br>
+        
+        <label for="bmi">BMI:</label><br>
+        <input type="number" id="bmi" name="bmi" step="0.01"><br>
+        
+        <label for="HbA1c_level">Hemoglobin A1c Level:</label><br>
+        <input type="number" id="HbA1c_level" name="HbA1c_level" step="0.01"><br>
+
+        <label for="blood_glucose_level">Blood Glucose Level:</label><br>
+        <input type="number" id="blood_glucose_level" name="blood_glucose_level" step="0.01"><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
