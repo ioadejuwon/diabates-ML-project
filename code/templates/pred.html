@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Diabetes Prediction Form</title>
+  <meta name="theme-color" content="white">
+  <!-- Import Google Font-->
+  <link rel="preconnect" href="../fonts.googleapis.com/index.html">
+  <link rel="preconnect" href="../fonts.gstatic.com/index.html" crossorigin>
+  <link href="../fonts.googleapis.com/css23585.css?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" id="google-font">
+  <!-- Vendor styles-->
+  <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+  <!-- <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css"/> -->
+  <!-- Main Theme Styles + Bootstrap-->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/theme.min.css') }}">
+  
+</head>
+<!-- Body-->
+<body style="background-color: rgb(15, 86, 86);">
+  
+  <!-- Page wrapper-->
+  <main class="page-wrapper">
+    
+    <!-- Page content-->
+    <div class="container py-5  mt-lg-5 mb-lg-4 my-xl-5 ">
+      <div class="row pt-sm-2 pt-lg-0 justify-content-center" >
+        
+        <!-- Page content-->
+        <div class="col-lg-9  pb-2 pb-sm-4 ">
+          <!-- Basic info-->
+          <section class="card border-0 py-1 p-md-2 p-xl-3 p-xxl-4 mb-4">
+            
+            <form action="/predict" method="post">
+              <div class="card-body">
+
+                <div class="text-center">
+                  <h1>Diabetes Prediction Form</h1>
+                  <p class="text">Please, fill the form below.</p>
+                </div>
+                
+                <div class="row g-3 g-sm-4 mt-0 mt-lg-2">
+                  
+                  
+                  
+                  <div class="col-sm-6">
+                    <label class="form-label" for="gender">Gender</label>
+                    <select class="form-select" id="gender" name="gender" >
+                      <option value="" selected disabled>Select Gender</option>
+                      <option value="1">Male</option>
+                      <option value="0">Female</option>
+                    </select>
+                  </div>
+                  
+                  <div class="col-sm-6">
+                    <label class="form-label" for="fn">Age</label>
+                    <input class="form-control" type="number" placeholder="Please, enter your age." id="age" name="age" >
+                  </div>
+                  
+                  
+                  <div class="col-sm-6">
+                    <label class="form-label" for="hypertension">History of Hypertension</label>
+                    <select class="form-select" id="hypertension" name="hypertension">
+                      <option value="" selected disabled>Select One</option>
+                      <option value="1">Yes</option>
+                      <option value="0">No</option>
+                    </select>
+                  </div>
+                  
+                  <div class="col-sm-6">
+                    <label class="form-label" for="heart_disease">History of Heart Disease</label>
+                    <select class="form-select" id="heart_disease" name="heart_disease">
+                      <option value="" selected disabled>Select One</option>
+                      <option value="1">Yes</option>
+                      <option value="0">No</option>
+                    </select>
+                  </div>
+                  
+                  <div class="col-sm-6">
+                    <label class="form-label" for="smoking_history">History of Smoking</label>
+                    <select class="form-select" id="smoking_history" name="smoking_history">
+                      <option value="" selected disabled>Select One</option>
+                      <option value="0">Never</option>
+                      <option value="1">Currently Smoking</option>
+                      <option value="1">Ever</option>
+                      <option value="1">Not Currently Smoking</option>
+                      <option value="1">Former</option>
+                      <option value="-1">No Info</option>
+                    </select>
+                  </div>
+                  
+                  <div class="col-sm-6">
+                    <label class="form-label" for="fn">Body Mass Index (BMI)</label>
+                    <input class="form-control"  type="number" id="bmi" name="bmi" step="0.01" placeholder="Please, enter your BMI.">
+                  </div>
+                  
+                  
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label class="form-label">Hemoglobin A1c Level</label>
+                      <div class="form-control-wrap">
+                        <input type="number" id="HbA1c_level" name="HbA1c_level" step="0.01" class="form-control" placeholder="Enter your Hemoglobin A1c Level">
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label class="form-label">Blood Glucose Level</label>
+                      <div class="form-control-wrap">
+                        <input type="number" id="blood_glucose_level" name="blood_glucose_level" step="0.01" class="form-control" placeholder="Blood Glucose Level">
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  
+                  
+                  <div class="col-12 d-flex justify-content-end pt-3">
+                    <a href="{{ url_for('index') }}" class="btn btn-outline-primary">Go back</a>
+                    <input class="btn btn-block btn-primary ms-3" type="submit" value="Predict Status">
+                  </div>
+                </div>
+              </div>
+              
+            </form>
+          </section>
+          
+          
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Footer-->
+  
+</body>
+</html>
