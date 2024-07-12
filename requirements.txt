@@ -138,7 +138,7 @@ pydot==1.4.2
 Pygments==2.17.2
 pyjsparser==2.7.1
 pyobjc==9.0
-pyobjc-core==9.0
+# pyobjc-core==9.0
 pyobjc-framework-Accessibility==9.0
 pyobjc-framework-Accounts==9.0
 pyobjc-framework-AddressBook==9.0
