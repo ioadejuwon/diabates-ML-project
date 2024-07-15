@@ -6,14 +6,9 @@
     <meta name="theme-color" content="white">
     <!-- Import Google Font-->
     <link rel="preconnect" href="static/css/fonts.googleapis.com/index.html">
-    <link rel="preconnect" href="../fonts.gstatic.com/index.html" crossorigin>
     <link href="static/css/fonts.googleapis.com/css23585.css?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" id="google-font">
-    <!-- Vendor styles-->
-    <!-- <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/> -->
-    <!-- <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css"/> -->
-    <!-- Main Theme Styles + Bootstrap-->
-    <!-- <link rel="stylesheet" media="screen" href="assets/css/theme.min.css"> -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/theme.min.css') }}">
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 
   </head>
   <!-- Body-->
@@ -23,92 +18,124 @@
     <main class="page-wrapper">
 
       <!-- Page content-->
-      <!-- Hero-->
-      <section class="position-relative py-5" style="background-color: rgb(15, 86, 86);">
-        <div class="d-none d-dark-mode-block position-absolute top-0 start-0 w-100 h-100"></div>
-        <div class="container dark-mode position-relative zindex-2 py-5 mb-4 mb-sm-5">
-          <div class="row pb-5 mb-2 mb-sm-0 mb-lg-3">
-            <div class="col-lg-10 col-xl-9">
-              <h1 class="display-2 pb-2 pb-sm-3">Diabetes Prediction</h1>
-              <p>The Model used in this case has an accuracy of 85%.
-                Therefore, there is a 25% chance that the algorithm might be wrong.
-                Please, visit the nearest hospital to get the tight result.
-              </p>
+
+      <section class="jarallax min-vh-100 py-lg-3 py-xl-4 py-xxl-5" data-jarallax data-speed="0.65">
+        <div class="jarallax-img" style="background-image: url(static/img/diabetes_patient.jpg?w=1155&h=2268);"></div>
+        <div class="container-fluid position-relative zindex-2 py-5 my-md-3 my-lg-5">
+          <div class="row pb-3 pt-4 pt-sm-5">
+            <div class="col-md-9 col-lg-7 col-xl-6 col-xxl-5 offset-lg-6 pt-5" >
+              <div class="card dark-mode border-0 rounded-1 py-2 py-sm-3 py-md-4" style="background-color: rgb(15, 86, 86) !important;">
+                <div class="card-body">
+                  <div class="mx-auto pt-2" style="max-width: 535px;">
+                    <h1 class="display-5 mb-4">Diabetes Prediction</h1>
+                    <p class="fs-lg pb-4 pb-lg-5 mb-2">
+                      The Model used in development of this project has an accuracy of 97.16% and a precision of 96.34%.
+                      <br>
+                      <br>
+                      This model provides predictions for educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Please consult a healthcare professional for medical concerns and decisions.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row align-items-center pb-lg-2">
+                      <a class="btn btn-lg btn-light w-100 w-sm-auto me-sm-3 mb-3 mb-sm-0" href="{{ url_for('predict_diabetes') }}">
+                        Get the Test
+                      </a>
+                    </div>
+                    <ul class="list-unstyled d-sm-flex mb-0 pt-4 pt-sm-5 mt-lg-2 mt-xl-4" style="display: none !important;">
+                      <li class="d-flex mb-2 mb-sm-0 pe-sm-1 me-sm-3"><i class="ai-check-alt text-white fs-4 mt-n1 me-2"></i>Full spectrum of services</li>
+                      <li class="d-flex"><i class="ai-check-alt text-white fs-4 mt-n1 me-2"></i>Flexible work terms</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- About-->
-      <section class="container position-relative zindex-3" style="margin-top: -135px;">
-        <div class="rounded-5 overflow-hidden"> 
-          <div class="jarallax ratio ratio-16x9" data-jarallax data-speed="0.6">
-            <div class="jarallax-img" style="background-image: url(static/img/diabetes_patient.jpg?w=1155&h=2268);"></div>
 
+
+
+
+       <!-- Services-->
+       <section class="container py-5 my-md-2 my-lg-3 my-xl-4 my-xxl-5">
+        <div class="row align-items-center py-1 py-sm-3 py-md-4 my-lg-2">
+          <h1 class="h1 text-center pb-5">
+            How to Prevent Diabetes
+          </h1>
+         
+          <div class="col-lg-12 col-xl-12 col-xxl-12 col-12">
+            <div class="row ">
+              <div class="col-md-6 col-lg-4">
+                <div class="card border-0 bg-faded-primary">
+                  <div class="card-body"><i class="ai-search-settings fs-1 text-primary d-block mb-3"></i>
+                    <h3 class="h4">Maintain a Healthy Weight</h3>
+                    <p class="fs-sm">
+                      Keeping your weight within a healthy range can reduce your risk of diabetes. Aim for a balanced diet and regular exercise to achieve and maintain a healthy weight.
+                    </p>
+                  </div>
+                </div>
+                <div class="card border-0 bg-faded-info mt-4">
+                  <div class="card-body"><i class="ai-bulb-alt fs-1 text-info d-block mb-3"></i>
+                    <h3 class="h4">
+                      Eat a Balanced Diet
+                    </h3>
+                    <p class="fs-sm">
+                      Focus on eating a diet rich in fruits, vegetables, whole grains, and lean proteins. Limit your intake of sugary foods and beverages, refined carbs, and unhealthy fats.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 pt-lg-3">
+                <div class="card border-0 bg-faded-warning mt-4 mt-sm-0 mt-lg-4">
+                  <div class="card-body"><i class="ai-mail-filled fs-1 text-warning d-block mb-3"></i>
+                    <h3 class="h4">
+                      Stay Active
+                    </h3>
+                    <p class="fs-sm">
+                      Regular physical activity can help control your weight, lower blood sugar levels, and boost your sensitivity to insulin. Aim for at least 30 minutes of moderate exercise most days of the week.
+                    </p>
+                  </div>
+                </div>
+                <div class="card border-0 bg-faded-danger mt-4">
+                  <div class="card-body"><i class="ai-telegram fs-2 text-danger d-block mb-3"></i>
+                    <h3 class="h4">
+                      Monitor Your Blood Sugar Levels
+                    </h3>
+                    <p class="fs-sm">
+                      If you have risk factors for diabetes, regular monitoring of your blood sugar levels can help you stay on top of your health and catch any early signs of diabetes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card border-0 bg-faded-primary">
+                  <div class="card-body"><i class="ai-search-settings fs-1 text-primary d-block mb-3"></i>
+                    <h3 class="h4">
+                      Avoid Smoking
+                    </h3>
+                    <p class="fs-sm">
+                      Smoking increases your risk of diabetes and its complications. Quitting smoking can significantly improve your health and reduce your risk of developing diabetes.
+                    </p>
+                  </div>
+                </div>
+                <div class="card border-0 bg-faded-info mt-4">
+                  <div class="card-body"><i class="ai-bulb-alt fs-1 text-info d-block mb-3"></i>
+                    <h3 class="h4">
+                      Get Regular Check-ups
+                    </h3>
+                    <p class="fs-sm">
+                      Regular health check-ups can help detect any early signs of diabetes. Your healthcare provider can provide personalized advice on how to prevent diabetes based on your health status and risk factors.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <!-- Show button on screens < 992px-->
+            <div class="text-center pt-3 mt-3 mt-sm-4"><a class="btn btn-primary" href="{{ url_for('predict_diabetes') }}">Get the Test</a></div>
           </div>
         </div>
-        
       </section>
 
-      <!-- Services-->
-      <section class="bg-secondary py-5">
-        <div class="container py-3 py-sm-4 py-lg-5 my-md-2 my-lg-3 my-xl-4 my-xxl-5">
-          <div class="fs-sm text-uppercase mb-3 mt-xl-2 mt-xxl-3">Work with us</div>
-          <h2 class="h1 pb-3 mb-lg-4">Our services</h2>
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 pb-xl-2 pb-xxl-3">
-            <!-- Item-->
-            <div class="col">
-              <div class="card h-100 border-0 rounded-5">
-                <div class="card-body ">
-                  
-                  <h3 class="h4">Predict Diabetes</h3>
-                  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget molestie massa. Donec egestas ex et velit egestas dignissim. Sed fringilla velit turpis.</p>
-                </div>
-                <div class="card-footer border-0 mb-3">
-                  <a class="btn btn-icon  btn-outline-primary rounded-circle" href="{{ url_for('predict_diabetes') }}">
-                    <i class="ai-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Item-->
-            <div class="col">
-              <div class="card h-100 border-0 rounded-5">
-                <div class="card-body ">
-                  
-                  <h3 class="h4">Helpful Tips</h3>
-                  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget molestie massa. Donec egestas ex et velit egestas dignissim. Sed fringilla velit turpis.</p>
-                </div>
-                <div class="card-footer border-0 mb-3">
-                  <a class="btn btn-icon  btn-outline-primary rounded-circle" href="#">
-                    <i class="ai-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-
-            <!-- Item-->
-            <div class="col">
-              <div class="card h-100 border-0 rounded-5">
-                <div class="card-body ">
-                  
-                  <h3 class="h4">Find the Nearest Hospital</h3>
-                  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget molestie massa. Donec egestas ex et velit egestas dignissim. Sed fringilla velit turpis.</p>
-                </div>
-                <div class="card-footer border-0 mb-3">
-                  <a class="btn btn-icon  btn-outline-primary rounded-circle" href="#">
-                    <i class="ai-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-           
-  
-          </div>
-        </div>
-      </section>
     </main>
 
     <!-- Footer-->
