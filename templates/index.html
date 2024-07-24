@@ -23,19 +23,19 @@
         <div class="jarallax-img" style="background-image: url(static/img/diabetes_patient.jpg?w=1155&h=2268);"></div>
         <div class="container-fluid position-relative zindex-2 py-5 my-md-3 my-lg-5">
           <div class="row pb-3 pt-4 pt-sm-5">
-            <div class="col-md-9 col-lg-7 col-xl-6 col-xxl-5 offset-lg-6 pt-5" >
-              <div class="card dark-mode border-0 rounded-1 py-2 py-sm-3 py-md-4" style="background-color: rgb(15, 86, 86) !important;">
+            <div class="col-md-9 col-lg-7 col-xl-6 col-xxl-6 offset-lg-3 pt-" >
+              <div class="card dark-mode border-0 rounded-1 py-2 py-sm-3 py-md-4">
                 <div class="card-body">
-                  <div class="mx-auto pt-2" style="max-width: 535px;">
-                    <h1 class="display-5 mb-4">Diabetes Prediction</h1>
-                    <p class="fs-lg pb-4 pb-lg-5 mb-2">
-                      The Model used in development of this project has an accuracy of 97.16% and a precision of 96.34%.
+                  <div class="mx-auto pt-2" style="max-width: 700px;">
+                    <h1 class="display-5 mb-4 text-black">Diabetes Prediction</h1>
+                    <p class="fs-5 pb-4 pb-lg-5 mb-2 text-black">
+                      The Model used in development of this project has an accuracy of 95.97% and a precision of 77.28%.
                       <br>
                       <br>
-                      This model provides predictions for educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Please consult a healthcare professional for medical concerns and decisions.
+                      This model provides predictions for educational purposes only. Please, consult a healthcare professional for medical concerns and decisions.
                     </p>
                     <div class="d-flex flex-column flex-sm-row align-items-center pb-lg-2">
-                      <a class="btn btn-lg btn-light w-100 w-sm-auto me-sm-3 mb-3 mb-sm-0" href="{{ url_for('predict_diabetes') }}">
+                      <a class="btn btn-lg btn-primary w-100 w-sm-auto me-sm-3 mb-3 mb-sm-0" href="{{ url_for('predict_diabetes') }}"  style="background-color: rgb(15, 86, 86) !important;">
                         Get the Test
                       </a>
                     </div>
@@ -68,61 +68,33 @@
                 <div class="card border-0 bg-faded-primary">
                   <div class="card-body"><i class="ai-search-settings fs-1 text-primary d-block mb-3"></i>
                     <h3 class="h4">Maintain a Healthy Weight</h3>
-                    <p class="fs-sm">
+                    <p class="fs-lg text-black" style="font-weight: 500;">
                       Keeping your weight within a healthy range can reduce your risk of diabetes. Aim for a balanced diet and regular exercise to achieve and maintain a healthy weight.
                     </p>
                   </div>
                 </div>
-                <div class="card border-0 bg-faded-info mt-4">
-                  <div class="card-body"><i class="ai-bulb-alt fs-1 text-info d-block mb-3"></i>
-                    <h3 class="h4">
-                      Eat a Balanced Diet
-                    </h3>
-                    <p class="fs-sm">
-                      Focus on eating a diet rich in fruits, vegetables, whole grains, and lean proteins. Limit your intake of sugary foods and beverages, refined carbs, and unhealthy fats.
-                    </p>
-                  </div>
-                </div>
+               
               </div>
               <div class="col-md-6 col-lg-4 pt-lg-3">
-                <div class="card border-0 bg-faded-warning mt-4 mt-sm-0 mt-lg-4">
-                  <div class="card-body"><i class="ai-mail-filled fs-1 text-warning d-block mb-3"></i>
-                    <h3 class="h4">
-                      Stay Active
-                    </h3>
-                    <p class="fs-sm">
-                      Regular physical activity can help control your weight, lower blood sugar levels, and boost your sensitivity to insulin. Aim for at least 30 minutes of moderate exercise most days of the week.
-                    </p>
-                  </div>
-                </div>
+                
                 <div class="card border-0 bg-faded-danger mt-4">
                   <div class="card-body"><i class="ai-telegram fs-2 text-danger d-block mb-3"></i>
                     <h3 class="h4">
                       Monitor Your Blood Sugar Levels
                     </h3>
-                    <p class="fs-sm">
+                    <p class="fs-lg text-black" style="font-weight: 500;">
                       If you have risk factors for diabetes, regular monitoring of your blood sugar levels can help you stay on top of your health and catch any early signs of diabetes.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4">
-                <div class="card border-0 bg-faded-primary">
-                  <div class="card-body"><i class="ai-search-settings fs-1 text-primary d-block mb-3"></i>
-                    <h3 class="h4">
-                      Avoid Smoking
-                    </h3>
-                    <p class="fs-sm">
-                      Smoking increases your risk of diabetes and its complications. Quitting smoking can significantly improve your health and reduce your risk of developing diabetes.
-                    </p>
-                  </div>
-                </div>
                 <div class="card border-0 bg-faded-info mt-4">
                   <div class="card-body"><i class="ai-bulb-alt fs-1 text-info d-block mb-3"></i>
                     <h3 class="h4">
                       Get Regular Check-ups
                     </h3>
-                    <p class="fs-sm">
+                    <p class="fs-lg text-black" style="font-weight: 500;">
                       Regular health check-ups can help detect any early signs of diabetes. Your healthcare provider can provide personalized advice on how to prevent diabetes based on your health status and risk factors.
                     </p>
                   </div>
@@ -131,27 +103,14 @@
               
             </div>
             <!-- Show button on screens < 992px-->
-            <div class="text-center pt-3 mt-3 mt-sm-4"><a class="btn btn-primary" href="{{ url_for('predict_diabetes') }}">Get the Test</a></div>
+            <div class="text-center pt-3 mt-3 mt-sm-4 h6 "><a class="btn btn-primary text-white" href="{{ url_for('predict_diabetes') }}">Get the Test</a></div>
           </div>
         </div>
       </section>
 
     </main>
 
-    <!-- Footer-->
-    <footer class="footer position-relative py-4 py-md-5 d-none" style="background-color: rgb(15, 86, 86);">
-      <div class="dark-mode container position-relative zindex-2 pt-4 pt-md-2 pt-xl-4 pt-xxl-5">
-        
-        <p class="fs-sm pb-2 pb-lg-0 mb-0">
-          <span class="opacity-70"> &copy; All rights reserved. Made by </span>
-            <a class="nav-link d-inline fw-normal p-0" href="https://createx.studio/" target="_blank" rel="noopener">
-              Createx Studio
-            </a>
-          </p>
-
-      </div>
-    </footer>
-   
+ 
 
   </body>
 </html>

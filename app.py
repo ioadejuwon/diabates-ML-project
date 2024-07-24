@@ -5,11 +5,11 @@ from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
 
-# Load the trained model
+# Load the best model
 with open('best_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
-# Load the scaler (you need to save and load the scaler along with the model)
+# Load the scaler
 with open('scaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
 
@@ -40,10 +40,9 @@ def predict():
     gender = int(request.form['gender'])
     age = int(request.form['age'])
     hypertension = int(request.form['hypertension'])
-    heart_disease = float(request.form['heart_disease'])
+    # heart_disease = float(request.form['heart_disease'])
     smoking_history = int(request.form['smoking_history'])
     bmi = float(request.form['bmi'])
-    
     HbA1c_level = float(request.form['HbA1c_level'])
     blood_glucose_level = int(request.form['blood_glucose_level'])
 

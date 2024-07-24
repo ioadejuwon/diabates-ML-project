@@ -31,7 +31,7 @@
 
                 <div class="text-center">
                   <h1>Diabetes Prediction Form</h1>
-                  <p class="text">Please, fill the form below.</p>
+                  <p class="text fw-bold">Please, fill the form below.</p>
                 </div>
                 
                 <div class="row g-3 g-sm-4 mt-0 mt-lg-2">
@@ -39,7 +39,7 @@
                   
                   
                   <div class="col-12 col-md-6">
-                    <label class="form-label" for="gender">Gender</label>
+                    <label class="form-label fs-5" for="gender">Gender</label>
                     <select class="form-select" id="gender" name="gender" >
                       <option value="" selected disabled>Select Gender</option>
                       <option value="1">Male</option>
@@ -48,13 +48,13 @@
                   </div>
                   
                   <div class="col-sm-6">
-                    <label class="form-label" for="fn">Age</label>
+                    <label class="form-label fs-5"" for="fn">Age</label>
                     <input class="form-control" type="number" placeholder="Please, enter your age." id="age" name="age" >
                   </div>
                   
                   
                   <div class="col-sm-6">
-                    <label class="form-label" for="hypertension">History of Hypertension</label>
+                    <label class="form-label fs-5"" for="hypertension">History of Hypertension</label>
                     <select class="form-select" id="hypertension" name="hypertension">
                       <option value="" selected disabled>Select One</option>
                       <option value="1">Yes</option>
@@ -63,7 +63,7 @@
                   </div>
                   
                   <div class="col-sm-6">
-                    <label class="form-label" for="heart_disease">History of Heart Disease</label>
+                    <label class="form-label fs-5"" for="heart_disease">History of Heart Disease</label>
                     <select class="form-select" id="heart_disease" name="heart_disease">
                       <option value="" selected disabled>Select One</option>
                       <option value="1">Yes</option>
@@ -72,7 +72,7 @@
                   </div>
                   
                   <div class="col-sm-6">
-                    <label class="form-label" for="smoking_history">History of Smoking</label>
+                    <label class="form-label fs-5"" for="smoking_history">History of Smoking</label>
                     <select class="form-select" id="smoking_history" name="smoking_history">
                       <option value="" selected disabled>Select One</option>
                       <option value="0">Never</option>
@@ -85,14 +85,14 @@
                   </div>
                   
                   <div class="col-sm-6">
-                    <label class="form-label" for="fn">Body Mass Index (BMI)</label>
+                    <label class="form-label fs-5"" for="fn">Body Mass Index (BMI)</label>
                     <input class="form-control"  type="number" id="bmi" name="bmi" step="0.01" placeholder="Please, enter your BMI.">
                   </div>
                   
                   
                   <div class="col-6">
                     <div class="form-group">
-                      <label class="form-label">Hemoglobin A1c Level</label>
+                      <label class="form-label fs-5"">Hemoglobin A1c Level</label>
                       <div class="form-control-wrap">
                         <input type="number" id="HbA1c_level" name="HbA1c_level" step="0.01" class="form-control" placeholder="Enter your Hemoglobin A1c Level">
                       </div>
@@ -101,7 +101,7 @@
                   
                   <div class="col-6">
                     <div class="form-group">
-                      <label class="form-label">Blood Glucose Level</label>
+                      <label class="form-label fs-5"">Blood Glucose Level</label>
                       <div class="form-control-wrap">
                         <input type="number" id="blood_glucose_level" name="blood_glucose_level" step="0.01" class="form-control" placeholder="Blood Glucose Level">
                       </div>
@@ -113,8 +113,8 @@
                   
                   
                   <div class="col-12 d-flex justify-content-end pt-3">
-                    <a href="{{ url_for('index') }}" class="btn btn-outline-primary">Go back</a>
-                    <input class="btn btn-block btn-primary ms-3" type="submit" value="Predict Status">
+                    <a href="{{ url_for('index') }}" class="btn btn-outline-primary ">Go back</a>
+                    <input class="btn btn-block btn-lg btn-primary ms-3" type="submit" value="Predict Status" style="background-color: rgb(15, 86, 86) !important;">
                   </div>
                 </div>
               </div>
